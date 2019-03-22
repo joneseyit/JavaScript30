@@ -18,28 +18,54 @@
     }
 
     // Regular
+    console.log('Howdy')
 
     // Interpolated
+    console.log("I wish I was a little bit %s", 'Taller')
 
     // Styled
+    console.log('%c I wish I was a baller', 'font-size: 50px; background: red')
 
     // warning!
 
+    console.warn('nuh uh')
+
     // Error :|
+    console.error("jeez")
 
     // Info
-
+    console.info(" please send pineapple.  Soon.")
     // Testing
+    const p = document.querySelector('p')
+    console.assert(p.classList.contains('ouch'), 'yeah you did it.  Almost')
 
     // clearing
 
     // Viewing DOM Elements
+    console.dir(p)
 
     // Grouping together
+    dogs.forEach(dog => {
+      console.log(`This is ${dog.name}`)
+    })
 
     // counting
+    console.count('junior')
+    console.count('junior')
+    console.count('junior')
+    console.count('junior')
+    console.count('junior')
 
     // timing
+    console.time('gimme data')
+    fetch('https://sleepy-cliffs-94580.herokuapp.com/api/v1/photos')
+    .then(res => res.json())
+    .then(data => {
+      console.timeEnd('gimme data');
+      console.log(data);
+    }
+  )
+    console.table(dogs)
 
   </script>
 </body>
